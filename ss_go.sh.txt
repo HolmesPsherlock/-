@@ -1,0 +1,19 @@
+安装步骤 
+
+wget -N --no-check-certificate https://raw.githubusercontent.com/ToyoDAdoubiBackup/doubi/master/ss-go.sh && chmod +x ss-go.sh && bash ss-go.sh 
+
+其他操作 
+
+启动：/etc/init.d/ss-go start
+
+停止：/etc/init.d/ss-go stop
+
+重启：/etc/init.d/ss-go restart
+
+查看状态：/etc/init.d/ss-go status
+
+安装目录：/usr/local/酸酸-go
+
+配置文件：/usr/local/酸酸-go/酸酸-go.conf
+
+日志文件：/usr/local/酸酸-go/酸酸-go.log

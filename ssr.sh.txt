@@ -1,0 +1,21 @@
+使用方法
+
+本脚本需要Linux root账户权限才能正常安装运行，所以如果不是 root账号，请先切换为root，如果是 root账号，那么请跳过！
+
+wget -N --no-check-certificate https://raw.githubusercontent.com/ToyoDAdoubiBackup/doubi/master/ssr.sh && chmod +x ssr.sh && bash ssr.sh
+
+文件位置
+
+安装目录：/usr/local/酸酸乳
+
+配置文件：/etc/酸酸乳/user-config.json
+
+其他说明
+
+酸酸乳 安装后，自动设置为 系统服务，所以支持使用服务来启动/停止等操作，同时支持开机启动。
+
+启动 酸酸乳：/etc/init.d/ssr start
+停止 酸酸乳：/etc/init.d/ssr stop
+重启 酸酸乳：/etc/init.d/ssr restart
+查看 酸酸乳状态：/etc/init.d/ssr status
+酸酸乳 默认支持UDP转发，服务端无需任何设置。

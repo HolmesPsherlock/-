@@ -1,0 +1,55 @@
+安装步骤
+
+wget -N --no-check-certificate https://raw.githubusercontent.com/ToyoDAdoubiBackup/doubi/master/gfw_push.sh && chmod +x gfw_push.sh && bash gfw_push.sh
+
+请输入该服务器的 [别名]
+用于推送消息时，使你快速分辨服务器。支持中文，但请勿包含一些特殊符号，否则可能导致推送出错。
+(默认为空):香港A
+ 
+========================
+	别名 :  香港A 
+========================
+ 
+请输入推送机器人 [API密匙]
+Token，通过 @notificationme_bot 机器人获取。
+获取步骤：向机器人发送 /start 后，机器人会告诉一个API URL，例如：https://tgbot.lbyczf.com/sendMessage/abc，其中的 abc 就是API密匙。
+(不能为空):abc
+ 
+========================
+	密匙 :  abc 
+========================
+ 
+[信息] 定时监控功能添加成功 !
+[信息] 初始化配置完成，目前已启动定时检测IP被墙状态。
+
+./gfw_push.sh
+
+获取API
+
+首先请联系机器人：@notificationme_bot
+
+获取API密匙：输入 /start 后回车，机器人就会随机生成一个 API 密匙，即下图中划红色横线的文本（cnb552jkzmy7py）。
+
+删除API密匙：如果你的 API 密匙暴露了，可以输入 /end 后回车，机器人就会删除你的API密匙。
+
+定时任务自定义
+
+脚本默认每分钟检测一次，如果你不需要这么频繁，可以使用crontab -e命令编辑定时任务，简单介绍下格式：
+
+* * * * * /xxx/xx
+# 前面的五个 * 分别对应：分钟、小时、日、月、星期(0和7代表星期日)。
+# 后面的 /xxx/xx 则对应要执行的命令（绝对路径）。
+写几个示例：
+
+# 假设你的脚本位于 /root 目录下，那么执行命令就是 /root/gfw_push.sh
+# 你们只要关注前面的定时间隔即可。
+ 
+* * * * * /bin/bash /root/gfw_push.sh
+# 每分钟执行一次
+ 
+0 3 * * * /bin/bash /root/gfw_push.sh
+# 每天凌晨3点0分执行一次
+ 
+30 */2 * * * /bin/bash /root/gfw_push.sh
+# 每隔两个小时在30分时执行一次
+你可以去这个网站计算出执行命令的间隔时间。

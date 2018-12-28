@@ -1,7 +1,7 @@
 使用方法
 
 使用root用户登录，运行以下命令：
-wget -N --no-check-certificate https://github.com/teddysun/across/raw/master/bbr.sh && chmod +x bbr.sh && bash bbr.sh
+wget -N --no-check-certificate https://raw.githubusercontent.com/ToyoDAdoubiBackup/doubi/master/bbr.sh && chmod +x bbr.sh && bash bbr.sh
 
 安装完成后，脚本会提示需要重启 VPS，输入 y 并回车后重启。
 
